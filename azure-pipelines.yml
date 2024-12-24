@@ -7,7 +7,9 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  name: default
+  demands:
+  - Agent.OS -equals Windows_NT
 
 steps:
 - task: ArchiveFiles@2
